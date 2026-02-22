@@ -133,12 +133,13 @@ export function injectPositive(values: number[]): number[] {
         } else if (!negativeFound) {
             sum += num; 
         }
+        
         return acc;
     }, [] as number[]);
-
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!negativeFound) {
         result.push(sum);
-    }
-
+        }
+    
     return result;
 }
