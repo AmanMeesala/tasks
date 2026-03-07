@@ -8,9 +8,8 @@ import { Question, QuestionType } from "./interfaces/question";
 export function makeBlankQuestion(
     id: number,
     name: string,
-    type: QuestionType
+    type: QuestionType,
 ): Question {
-    
     return {
         id: id,
         name: name,
@@ -19,7 +18,7 @@ export function makeBlankQuestion(
         expected: "",
         options: [],
         points: 1,
-        published: false
+        published: false,
     };
 }
 
@@ -31,10 +30,11 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    const normalized = [answer, question.expected].map(str => str.trim().toLowerCase());
+    const normalized = [answer, question.expected].map((str) =>
+        str.trim().toLowerCase(),
+    );
 
     return normalized[0] === normalized[1];
-    
 }
 
 /**
@@ -46,13 +46,12 @@ export function isCorrect(question: Question, answer: string): boolean {
 export function isValid(question: Question, answer: string): boolean {
     if (question.type === "short_answer_question") {
         return true;
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     } else if (question.type === "multiple_choice_question") {
         return question.options.includes(answer);
     }
     return false;
 }
- 
 
 /**
  * Consumes a question and produces a string representation combining the
@@ -61,9 +60,8 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-        const short_name = question.name.slice(0, 10);
+    const short_name = question.name.slice(0, 10);
     return `${question.id}: ${short_name}`;
-
 }
 
 /**
@@ -85,9 +83,11 @@ export function toShortForm(question: Question): string {
  */
 export function toMarkdown(question: Question): string {
     let markdown = `# ${question.name}\n${question.body}`;
-    
+
     if (question.type === "multiple_choice_question") {
-        const optionsMarkdown = question.options.map(option => `- ${option}`).join("\n");
+        const optionsMarkdown = question.options
+            .map((option) => `- ${option}`)
+            .join("\n");
         markdown += `\n${optionsMarkdown}`;
     }
 
@@ -101,7 +101,7 @@ export function toMarkdown(question: Question): string {
 export function renameQuestion(question: Question, newName: string): Question {
     return {
         ...question,
-        name: newName
+        name: newName,
     };
 }
 
@@ -113,7 +113,7 @@ export function renameQuestion(question: Question, newName: string): Question {
 export function publishQuestion(question: Question): Question {
     return {
         ...question,
-        published: !question.published
+        published: !question.published,
     };
 }
 
@@ -128,9 +128,8 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
         ...oldQuestion,
         id: id,
         name: `Copy of ${oldQuestion.name}`,
-        published: false
+        published: false,
     };
-    
 }
 
 /**
@@ -144,9 +143,8 @@ export function addOption(question: Question, newOption: string): Question {
     const updated_options = [...question.options, newOption];
     return {
         ...question,
-        options: updated_options
+        options: updated_options,
     };
-    
 }
 
 /**
@@ -161,7 +159,7 @@ export function mergeQuestion(
     id: number,
     name: string,
     contentQuestion: Question,
-    { points }: { points: number }
+    { points }: { points: number },
 ): Question {
     return {
         id: id,
@@ -171,8 +169,6 @@ export function mergeQuestion(
         options: contentQuestion.options,
         expected: contentQuestion.expected,
         points: points,
-        published: false
+        published: false,
     };
-
-    
 }
