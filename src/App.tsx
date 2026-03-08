@@ -15,7 +15,6 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 function App(): React.JSX.Element {
     return (
         <div className="App">
-            <h1>This is header text</h1>
             <header className="App-header">
                 Aman Meesala UD CISC275 with React Hooks and TypeScript
             </header>
