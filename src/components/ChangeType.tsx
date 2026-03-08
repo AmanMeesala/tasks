@@ -4,7 +4,7 @@ import { QuestionType } from "../interfaces/question";
 
 export function ChangeType(): React.JSX.Element {
     const [questionType, setQuestionType] = useState<QuestionType>(
-        "multiple_choice_question",
+        "short_answer_question",
     );
     function changeType() {
         setQuestionType(
