@@ -6,14 +6,17 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
 function App(): React.JSX.Element {
     return (
         <div className="App">
-            <h1>This is header text</h1>
             <header className="App-header">
-                Aman Meesala UD CISC275 with React Hooks and TypeScript
+                <h1>Aman Meesala UD CISC275 with React Hooks and TypeScript</h1>
             </header>
             <p>Hello World</p>
             <img
@@ -53,18 +56,42 @@ function App(): React.JSX.Element {
                 </Row>
             </Container>
 
-            <hr></hr>
-            <Counter></Counter>
-            <hr />
-            <RevealAnswer></RevealAnswer>
-            <hr />
-            <StartAttempt></StartAttempt>
-            <hr />
-            <TwoDice></TwoDice>
-            <hr />
-            <ChangeType></ChangeType>
-            <hr />
-            <CycleHoliday></CycleHoliday>
+            <div>{<DoubleHalf></DoubleHalf>}</div>
+            <div>
+                <ChooseTeam></ChooseTeam>
+            </div>
+
+            <div>
+                <ColoredBox></ColoredBox>
+            </div>
+
+            <div>
+                <ShoveBox></ShoveBox>
+            </div>
+
+            <div>
+                <Counter></Counter>
+            </div>
+
+            <div>
+                <RevealAnswer></RevealAnswer>
+            </div>
+
+            <div>
+                <StartAttempt></StartAttempt>
+            </div>
+
+            <div>
+                <TwoDice></TwoDice>
+            </div>
+
+            <div>
+                <ChangeType></ChangeType>
+            </div>
+
+            <div>
+                <CycleHoliday></CycleHoliday>
+            </div>
         </div>
     );
 }
