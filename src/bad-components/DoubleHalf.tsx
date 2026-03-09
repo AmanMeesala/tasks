@@ -42,7 +42,7 @@ export function DoubleHalf(): React.JSX.Element {
 
     return (
         <div>
-            <h3>Double Half</h3>
+            Double Half
             <div>
                 The current value is: <span>{value}</span>
             </div>

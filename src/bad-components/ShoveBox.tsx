@@ -41,8 +41,7 @@ export function ShoveBox(): React.JSX.Element {
 
     return (
         <div>
-            <h3>Shove Box</h3>
-
+            Shove Box
             <span>The box is at: {position}</span>
             <div>
                 <ShoveBoxButton position={position} setPosition={setPosition} />
