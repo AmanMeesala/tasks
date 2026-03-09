@@ -16,7 +16,7 @@ function App(): React.JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                Aman Meesala UD CISC275 with React Hooks and TypeScript
+                <h1>Aman Meesala UD CISC275 with React Hooks and TypeScript</h1>
             </header>
             <p>Hello World</p>
             <img
@@ -56,26 +56,42 @@ function App(): React.JSX.Element {
                 </Row>
             </Container>
 
-            <hr></hr>
-            {<DoubleHalf></DoubleHalf>}
-            <hr></hr>
-            <ChooseTeam></ChooseTeam>
-            <hr></hr>
-            <ColoredBox></ColoredBox>
-            <hr></hr>
-            <ShoveBox></ShoveBox>
-            <hr></hr>
-            <Counter></Counter>
-            <hr />
-            <RevealAnswer></RevealAnswer>
-            <hr />
-            <StartAttempt></StartAttempt>
-            <hr />
-            <TwoDice></TwoDice>
-            <hr />
-            <ChangeType></ChangeType>
-            <hr />
-            <CycleHoliday></CycleHoliday>
+            <div>{<DoubleHalf></DoubleHalf>}</div>
+            <div>
+                <ChooseTeam></ChooseTeam>
+            </div>
+
+            <div>
+                <ColoredBox></ColoredBox>
+            </div>
+
+            <div>
+                <ShoveBox></ShoveBox>
+            </div>
+
+            <div>
+                <Counter></Counter>
+            </div>
+
+            <div>
+                <RevealAnswer></RevealAnswer>
+            </div>
+
+            <div>
+                <StartAttempt></StartAttempt>
+            </div>
+
+            <div>
+                <TwoDice></TwoDice>
+            </div>
+
+            <div>
+                <ChangeType></ChangeType>
+            </div>
+
+            <div>
+                <CycleHoliday></CycleHoliday>
+            </div>
         </div>
     );
 }
