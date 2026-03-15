@@ -16,7 +16,7 @@ export function GiveAttempts(): React.JSX.Element {
     }
     return (
         <div>
-            <h3>Give Attempts</h3>
+            Give Attempts
             <p>Attempts remaining: {attempts}</p>
             <input
                 type="number"

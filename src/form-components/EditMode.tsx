@@ -7,7 +7,7 @@ export function EditMode(): React.JSX.Element {
 
     return (
         <div>
-            <h3>Edit Mode</h3>
+            Edit Mode
             <div className="form-switch">
                 <input
                     type="checkbox"

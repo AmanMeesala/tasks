@@ -95,6 +95,7 @@ function App(): React.JSX.Element {
             <hr />
             <ChangeType></ChangeType>
             <hr />
+
             <CycleHoliday></CycleHoliday>
         </div>
     );

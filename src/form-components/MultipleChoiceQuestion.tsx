@@ -10,7 +10,7 @@ export function MultipleChoiceQuestion({
     const [selectedOption, setSelectedOption] = useState<string>(options[0]);
     return (
         <div>
-            <h3>Multiple Choice Question</h3>
+            Multiple Choice Question
             <select
                 value={selectedOption}
                 onChange={(event) => {

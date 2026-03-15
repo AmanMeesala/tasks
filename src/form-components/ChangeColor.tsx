@@ -15,7 +15,7 @@ export function ChangeColor(): React.JSX.Element {
     const [selectedColor, setSelectedColor] = useState<string>("red");
     return (
         <div>
-            <h3>Change Color</h3>
+            Change Color
             <div>
                 {colors.map((color: string) => (
                     <Form.Check

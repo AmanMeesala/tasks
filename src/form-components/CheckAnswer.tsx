@@ -8,7 +8,7 @@ export function CheckAnswer({
     const [answer, setAnswer] = useState<string>("");
     return (
         <div>
-            <h3>Check Answer</h3>
+            Check Answer
             <input
                 type="text"
                 value={answer}
