@@ -7,9 +7,25 @@ export function MultipleChoiceQuestion({
     options: string[];
     expectedAnswer: string;
 }): React.JSX.Element {
+    const [selectedOption, setSelectedOption] = useState<string>(options[0]);
     return (
         <div>
             <h3>Multiple Choice Question</h3>
+            <select
+                value={selectedOption}
+                onChange={(event) => {
+                    setSelectedOption(event.target.value);
+                }}
+            >
+                {options.map((option: string) => (
+                    <option key={option} value={option}>
+                        {option}
+                    </option>
+                ))}
+            </select>
+            <span style={{ marginLeft: "10px" }}>
+                {selectedOption === expectedAnswer ? "✔️" : "❌"}
+            </span>
         </div>
     );
 }
