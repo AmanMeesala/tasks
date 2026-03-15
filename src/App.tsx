@@ -11,6 +11,11 @@ import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): React.JSX.Element {
     return (
@@ -57,41 +62,41 @@ function App(): React.JSX.Element {
             </Container>
 
             <div>{<DoubleHalf></DoubleHalf>}</div>
-            <div>
-                <ChooseTeam></ChooseTeam>
-            </div>
 
-            <div>
-                <ColoredBox></ColoredBox>
-            </div>
+            <hr></hr>
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
+            <hr></hr>
+            {/* <DoubleHalf></DoubleHalf> */}
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
+            <hr></hr>
+            <ShoveBox></ShoveBox>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
 
-            <div>
-                <ShoveBox></ShoveBox>
-            </div>
-
-            <div>
-                <Counter></Counter>
-            </div>
-
-            <div>
-                <RevealAnswer></RevealAnswer>
-            </div>
-
-            <div>
-                <StartAttempt></StartAttempt>
-            </div>
-
-            <div>
-                <TwoDice></TwoDice>
-            </div>
-
-            <div>
-                <ChangeType></ChangeType>
-            </div>
-
-            <div>
-                <CycleHoliday></CycleHoliday>
-            </div>
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
